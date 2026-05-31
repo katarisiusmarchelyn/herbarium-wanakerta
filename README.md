@@ -9,9 +9,18 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 - Katalog tokoh dengan pencarian dan filter.
 - Arsip interaktif: label, jalur kabut, dan label nama pembaca.
 - Catatan botanical gothic yang spoiler-safe.
+- Herbarium Nyata: 21 kartu tanaman sungguhan dari novel, dengan pencarian dan filter.
 - Papan kasus untuk menggoda rasa penasaran pembaca.
 - Audio `Daun Memilih Nama`.
 - Daftar bab, FAQ, dan CTA pembelian ke `https://lynk.id/marchelyn`.
+
+## URL Publik
+
+Website sudah dipublish gratis melalui GitHub Pages:
+
+```text
+https://katarisiusmarchelyn.github.io/herbarium-wanakerta/
+```
 
 ## Cara Buka di Komputer
 
