@@ -1343,6 +1343,13 @@ button {
   color: #f0d98d;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
 @media (max-width: 1060px) {
   .feature-grid,
   .character-grid,
@@ -1368,6 +1375,14 @@ button {
 @media (max-width: 820px) {
   .site-header {
     align-items: flex-start;
+  }
+
+  .site-footer {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 
   .menu-toggle {

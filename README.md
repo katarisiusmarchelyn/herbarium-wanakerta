@@ -5,11 +5,13 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 ## Isi Website
 
 - Hero dengan visual banner dan CTA beli PDF.
+- Halaman English Companion untuk pembaca global di `/en/`.
 - Peta Wanakerta interaktif.
 - Katalog tokoh dengan pencarian dan filter.
 - Arsip interaktif: label, jalur kabut, dan label nama pembaca.
 - Catatan botanical gothic yang spoiler-safe.
 - Herbarium Nyata: 21 kartu tanaman sungguhan dari novel, dengan pencarian dan filter.
+- Glosarium internasional interaktif untuk istilah Indonesia, budaya lokal, dan konsep Wanakerta.
 - Papan kasus untuk menggoda rasa penasaran pembaca.
 - Audio `Daun Memilih Nama`.
 - Daftar bab, FAQ, dan CTA pembelian ke `https://lynk.id/marchelyn`.
@@ -20,6 +22,12 @@ Website sudah dipublish gratis melalui GitHub Pages:
 
 ```text
 https://katarisiusmarchelyn.github.io/herbarium-wanakerta/
+```
+
+Versi pembaca global:
+
+```text
+https://katarisiusmarchelyn.github.io/herbarium-wanakerta/en/
 ```
 
 ## Cara Buka di Komputer
@@ -59,5 +67,8 @@ Catatan: jangan upload PDF novel lengkap ke repository publik. Website ini hanya
 - `index.html` - struktur halaman.
 - `styles.css` - tampilan visual.
 - `script.js` - semua interaksi.
+- `en/index.html` - halaman English Companion untuk pembaca global.
+- `en/global.css` - tampilan khusus halaman global.
+- `en/global.js` - glosarium, peta, tokoh, tanaman, dan interaksi halaman global.
 - `assets/` - gambar dan audio promosi.
 - `.nojekyll` - membantu GitHub Pages menyajikan file statis apa adanya.
