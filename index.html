@@ -51,6 +51,27 @@
       </nav>
     </header>
 
+    <div class="background-audio" data-audio-shell>
+      <audio data-bg-audio loop preload="auto">
+        <source src="assets/daun-memilih-nama.mp3" type="audio/mpeg" />
+      </audio>
+      <button
+        class="audio-toggle"
+        type="button"
+        data-audio-toggle
+        data-audio-on-label="Pause musik"
+        data-audio-off-label="Play musik"
+        data-audio-playing-hint="Musik aktif"
+        data-audio-paused-hint="Musik mati"
+        data-audio-blocked-hint="Klik untuk mulai"
+        aria-pressed="false"
+      >
+        <span class="audio-toggle-icon" aria-hidden="true"></span>
+        <span class="audio-toggle-text" data-audio-label>Pause musik</span>
+        <span class="audio-toggle-hint" data-audio-hint>Musik aktif</span>
+      </button>
+    </div>
+
     <main id="main">
       <section class="hero" id="home">
         <div class="hero-media" aria-hidden="true">
@@ -496,6 +517,7 @@
       </div>
     </footer>
 
+    <script src="analytics.js" defer></script>
     <script src="script.js" defer></script>
   </body>
 </html>

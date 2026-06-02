@@ -14,6 +14,7 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 - Glosarium internasional interaktif untuk istilah Indonesia, budaya lokal, dan konsep Wanakerta.
 - Papan kasus untuk menggoda rasa penasaran pembaca.
 - Audio `Daun Memilih Nama`.
+- Kontrol musik background dan pondasi analytics untuk GA4 serta Meta Pixel.
 - Daftar bab, FAQ, dan CTA pembelian ke `https://lynk.id/marchelyn`.
 
 ## URL Publik
@@ -67,8 +68,32 @@ Catatan: jangan upload PDF novel lengkap ke repository publik. Website ini hanya
 - `index.html` - struktur halaman.
 - `styles.css` - tampilan visual.
 - `script.js` - semua interaksi.
+- `analytics.js` - konfigurasi GA4, Meta Pixel, dan event klik/interaksi.
 - `en/index.html` - halaman English Companion untuk pembaca global.
 - `en/global.css` - tampilan khusus halaman global.
 - `en/global.js` - glosarium, peta, tokoh, tanaman, dan interaksi halaman global.
 - `assets/` - gambar dan audio promosi.
 - `.nojekyll` - membantu GitHub Pages menyajikan file statis apa adanya.
+
+## Analytics Gratis
+
+Website ini sudah siap untuk Google Analytics 4 dan Meta Pixel. Buka `analytics.js`, lalu isi:
+
+```js
+ga4MeasurementId: "G-XXXXXXXXXX",
+metaPixelId: "123456789012345",
+```
+
+Jika salah satu belum punya ID, biarkan kosong. Website tetap berjalan, hanya platform tersebut belum mengirim data.
+
+Event yang disiapkan:
+
+- `buy_link_click` untuk klik ke halaman pembelian.
+- `language_switch_click` untuk pindah Indonesia/English.
+- `map_pin_click` untuk klik peta.
+- `filter_click` untuk filter glosarium/tokoh/tanaman.
+- `onsite_search` untuk pencarian glosarium dan katalog.
+- `background_music_play`, `background_music_pause`, dan `background_music_autoplay_blocked`.
+- `case_clue_click`, `route_choice`, `label_randomized`, dan `name_label_generated`.
+
+Catatan privasi: fitur label nama tidak mengirim nama yang diketik pembaca ke analytics.
