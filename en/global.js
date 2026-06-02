@@ -1266,6 +1266,85 @@ function setupRoutes() {
   });
 }
 
+function setupBackgroundAudio() {
+  const shell = $("[data-audio-shell]");
+  const audio = $("[data-bg-audio]");
+  const button = $("[data-audio-toggle]");
+  const label = $("[data-audio-label]");
+  const hint = $("[data-audio-hint]");
+  if (!shell || !audio || !button || !label || !hint) return;
+
+  const text = {
+    on: button.dataset.audioOnLabel || "Pause music",
+    off: button.dataset.audioOffLabel || "Play music",
+    playing: button.dataset.audioPlayingHint || "Music on",
+    paused: button.dataset.audioPausedHint || "Music paused",
+    blocked: button.dataset.audioBlockedHint || "Tap to start",
+  };
+
+  const otherAudios = $$("audio:not([data-bg-audio])");
+  let userPaused = false;
+
+  audio.volume = 0.58;
+
+  function setState(state) {
+    const isPlaying = state === "playing";
+    shell.classList.toggle("is-playing", isPlaying);
+    shell.classList.toggle("is-paused", state === "paused" || state === "blocked");
+    shell.classList.toggle("needs-action", state === "blocked");
+    label.textContent = isPlaying ? text.on : text.off;
+    hint.textContent = state === "blocked" ? text.blocked : isPlaying ? text.playing : text.paused;
+    button.setAttribute("aria-pressed", String(isPlaying));
+  }
+
+  async function playMusic() {
+    try {
+      otherAudios.forEach((item) => item.pause());
+      await audio.play();
+      userPaused = false;
+      setState(audio.paused ? "blocked" : "playing");
+    } catch {
+      if (!userPaused) setState("blocked");
+    }
+  }
+
+  button.addEventListener("click", () => {
+    if (audio.paused) {
+      playMusic();
+      return;
+    }
+    userPaused = true;
+    audio.pause();
+    setState("paused");
+  });
+
+  otherAudios.forEach((item) => {
+    item.addEventListener("play", () => {
+      if (!audio.paused) {
+        userPaused = true;
+        audio.pause();
+        setState("paused");
+      }
+    });
+  });
+
+  const unlock = () => {
+    if (!userPaused && audio.paused) playMusic();
+  };
+  document.addEventListener("pointerdown", unlock, { once: true, passive: true });
+  document.addEventListener("keydown", unlock, { once: true });
+
+  audio.addEventListener("play", () => {
+    if (!audio.paused) setState("playing");
+  });
+  audio.addEventListener("pause", () => {
+    if (userPaused) setState("paused");
+  });
+
+  setState("playing");
+  playMusic();
+}
+
 setupMenu();
 setupReaderPaths();
 setupGlossary();
@@ -1274,3 +1353,4 @@ setupPeople();
 setupPlants();
 setupLabels();
 setupRoutes();
+setupBackgroundAudio();

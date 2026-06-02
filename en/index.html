@@ -51,6 +51,27 @@
       </nav>
     </header>
 
+    <div class="background-audio" data-audio-shell>
+      <audio data-bg-audio loop preload="auto">
+        <source src="../assets/daun-memilih-nama.mp3" type="audio/mpeg" />
+      </audio>
+      <button
+        class="audio-toggle"
+        type="button"
+        data-audio-toggle
+        data-audio-on-label="Pause music"
+        data-audio-off-label="Play music"
+        data-audio-playing-hint="Music on"
+        data-audio-paused-hint="Music paused"
+        data-audio-blocked-hint="Tap to start"
+        aria-pressed="false"
+      >
+        <span class="audio-toggle-icon" aria-hidden="true"></span>
+        <span class="audio-toggle-text" data-audio-label>Pause music</span>
+        <span class="audio-toggle-hint" data-audio-hint>Music on</span>
+      </button>
+    </div>
+
     <main id="main">
       <section class="hero global-hero" id="home">
         <div class="hero-media" aria-hidden="true">
@@ -531,6 +552,7 @@
       </div>
     </footer>
 
+    <script src="../analytics.js" defer></script>
     <script src="global.js" defer></script>
   </body>
 </html>
