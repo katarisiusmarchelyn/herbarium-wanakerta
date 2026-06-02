@@ -6,7 +6,7 @@
   This file does not send the reader's typed name from the label feature.
 */
 window.HERBARIUM_ANALYTICS_CONFIG = {
-  ga4MeasurementId: "",
+  ga4MeasurementId: "G-48JN6S6LZF",
   metaPixelId: "",
   debug: false,
 };
@@ -174,6 +174,8 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
   }
 
   function setupInteractionTracking() {
+    const recentSearches = new Map();
+
     document.addEventListener("click", (event) => {
       const target = event.target.closest("a, button");
       if (!target) return;
@@ -194,6 +196,11 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
       input.addEventListener("change", () => {
         const term = input.value.trim();
         if (term.length >= 2) {
+          const key = `${input.id}:${term.toLowerCase()}`;
+          const now = Date.now();
+          if (recentSearches.has(key) && now - recentSearches.get(key) < 3000) return;
+          recentSearches.set(key, now);
+
           track("onsite_search", {
             search_box: input.id,
             search_term: term,
