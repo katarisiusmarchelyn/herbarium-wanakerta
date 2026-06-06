@@ -111,6 +111,21 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
 
   window.trackHerbariumEvent = track;
 
+  function trackQrLanding() {
+    const params = new URLSearchParams(window.location.search);
+    const medium = cleanValue(params.get("utm_medium"));
+    const qr = cleanValue(params.get("qr"));
+    if (medium !== "qr" && !qr) return;
+
+    track("qr_code_scan", {
+      source: params.get("utm_source") || "printed_qr",
+      destination: "official_website",
+      label: params.get("utm_content") || qr || "novel_qr",
+      feature: "print_qr",
+      campaign: params.get("utm_campaign") || "herbarium_official_site",
+    });
+  }
+
   function getReadableText(element) {
     return (
       element.getAttribute("aria-label") ||
@@ -229,6 +244,7 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
       }, 1800);
     }
 
+    trackQrLanding();
     track("companion_page_ready");
   }
 

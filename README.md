@@ -4,7 +4,7 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 
 ## Isi Website
 
-- Hero dengan visual banner dan CTA beli PDF.
+- Hero dengan visual banner, CTA Google Play Books, sample 100 halaman gratis, dan CTA beli PDF.
 - Halaman English Companion untuk pembaca global di `/en/`.
 - Peta Wanakerta interaktif.
 - Katalog tokoh dengan pencarian dan filter.
@@ -15,7 +15,8 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 - Papan kasus untuk menggoda rasa penasaran pembaca.
 - Audio `Daun Memilih Nama`.
 - Kontrol musik background dan pondasi analytics untuk GA4 serta Meta Pixel.
-- Daftar bab, FAQ, dan CTA pembelian ke `https://lynk.id/marchelyn`.
+- Daftar bab, FAQ, dan CTA pembelian ke Google Play Books serta `https://lynk.id/marchelyn`.
+- QR code resmi bertema novel untuk cetak dan promosi.
 
 ## URL Publik
 
@@ -73,7 +74,20 @@ Catatan: jangan upload PDF novel lengkap ke repository publik. Website ini hanya
 - `en/global.css` - tampilan khusus halaman global.
 - `en/global.js` - glosarium, peta, tokoh, tanaman, dan interaksi halaman global.
 - `assets/` - gambar dan audio promosi.
+- `assets/qr-herbarium-website-themed.png` - QR code bertema novel untuk dimasukkan ke buku atau materi promosi.
+- `assets/qr-herbarium-website-compact.png` - QR code bertema versi lebih ringkas.
+- `assets/qr-herbarium-website-plain.png` - QR code polos cadangan untuk cetak ukuran kecil.
 - `.nojekyll` - membantu GitHub Pages menyajikan file statis apa adanya.
+
+## QR Code Resmi
+
+Target QR code:
+
+```text
+https://katarisiusmarchelyn.github.io/herbarium-wanakerta/?utm_source=novel_print&utm_medium=qr&utm_campaign=herbarium_official_site&utm_content=novel_qr&qr=novel
+```
+
+QR ini statis dan tidak memakai layanan shortener berbayar. Selama repository GitHub Pages aktif, file QR dan website tetap bisa diakses tanpa biaya hosting tambahan.
 
 ## Analytics Gratis
 
@@ -93,6 +107,7 @@ Event yang disiapkan:
 - `map_pin_click` untuk klik peta.
 - `filter_click` untuk filter glosarium/tokoh/tanaman.
 - `onsite_search` untuk pencarian glosarium dan katalog.
+- `qr_code_scan` untuk kunjungan dari QR code cetak novel.
 - `background_music_play`, `background_music_pause`, dan `background_music_autoplay_blocked`.
 - `case_clue_click`, `route_choice`, `label_randomized`, dan `name_label_generated`.
 
