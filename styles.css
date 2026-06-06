@@ -359,6 +359,12 @@ button {
   color: #f4e6b7;
 }
 
+.button-gold {
+  border-color: rgba(247, 239, 217, 0.78);
+  background: #b99b4d;
+  color: #151713;
+}
+
 .quick-notes {
   margin-top: 24px;
   max-width: 720px;
@@ -1314,11 +1320,29 @@ button {
   color: #d7ceb6;
 }
 
+.buy-actions {
+  display: flex;
+  width: min(100%, 430px);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.buy-actions .button {
+  width: 100%;
+}
+
+.store-note {
+  color: #cfc3a3;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
   gap: 18px;
-  padding: 28px clamp(18px, 4vw, 48px);
+  padding: 28px clamp(18px, 4vw, 48px) clamp(96px, 9vw, 132px);
   background: #0c0e0b;
   color: #d7ceb6;
 }
