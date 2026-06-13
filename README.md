@@ -4,7 +4,7 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 
 ## Isi Website
 
-- Hero dengan visual banner, CTA Google Play Books, sample 100 halaman gratis, dan CTA beli PDF.
+- Hero dengan visual banner, CTA baca 3 bab gratis, Google Play Books, Amazon Kindle, dan CTA beli PDF.
 - Halaman English Companion untuk pembaca global di `/en/`.
 - Peta Wanakerta interaktif.
 - Katalog tokoh dengan pencarian dan filter.
@@ -15,7 +15,8 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 - Papan kasus untuk menggoda rasa penasaran pembaca.
 - Audio `Daun Memilih Nama`.
 - Kontrol musik background dan pondasi analytics untuk GA4 serta Meta Pixel.
-- Daftar bab, FAQ, dan CTA pembelian ke Google Play Books serta `https://lynk.id/marchelyn`.
+- Daftar bab, FAQ, CTA 3 bab gratis, CTA preview 100 halaman English, dan pembelian ke Google Play Books, Amazon Kindle, serta `https://lynk.id/marchelyn`.
+- Panel media sosial resmi Marchelyn.id.
 - QR code resmi bertema novel untuk cetak dan promosi.
 
 ## URL Publik
@@ -103,6 +104,7 @@ Jika salah satu belum punya ID, biarkan kosong. Website tetap berjalan, hanya pl
 Event yang disiapkan:
 
 - `buy_link_click` untuk klik ke halaman pembelian.
+- `social_link_click` untuk klik Instagram, Facebook, Threads, dan TikTok Marchelyn.id.
 - `language_switch_click` untuk pindah Indonesia/English.
 - `map_pin_click` untuk klik peta.
 - `filter_click` untuk filter glosarium/tokoh/tanaman.

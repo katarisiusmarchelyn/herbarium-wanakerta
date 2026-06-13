@@ -175,6 +175,10 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
     if (element instanceof HTMLAnchorElement) {
       const href = element.getAttribute("href") || "";
       const label = getReadableText(element);
+      if (href.includes("instagram.com")) return ["social_link_click", { label, destination: "instagram" }];
+      if (href.includes("facebook.com")) return ["social_link_click", { label, destination: "facebook" }];
+      if (href.includes("threads.com")) return ["social_link_click", { label, destination: "threads" }];
+      if (href.includes("tiktok.com")) return ["social_link_click", { label, destination: "tiktok" }];
       if (href.includes("lynk.id")) return ["buy_link_click", { label, destination: "lynk_id" }];
       if (href.includes("amazon.") || href.toLowerCase().includes("kindle")) return ["buy_link_click", { label, destination: "kindle" }];
       if (href.includes("play.google.com")) return ["buy_link_click", { label, destination: "google_play_books" }];

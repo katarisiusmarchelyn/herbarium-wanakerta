@@ -1,5 +1,4 @@
-const googlePlayBooksUrl =
-  "https://play.google.com/store/books/details/Marchelyn_Herbarium_Nama_Nama_yang_Hilang_Misteri?id=6gffEQAAQBAJ";
+const authorStoreUrl = "https://lynk.id/marchelyn";
 
 const places = {
   herbarium: {
@@ -774,7 +773,7 @@ function initClues() {
         <p class="eyebrow">${data.eyebrow}</p>
         <h3>${data.title}</h3>
         <p>${data.copy}</p>
-        <a class="button button-dark" href="${googlePlayBooksUrl}" target="_blank" rel="noreferrer">Baca sample 100 halaman</a>
+        <a class="button button-dark" href="${authorStoreUrl}" target="_blank" rel="noreferrer">Baca 3 Bab Gratis</a>
       `;
     });
   });

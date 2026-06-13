@@ -1338,6 +1338,69 @@ button {
   line-height: 1.55;
 }
 
+.social-section {
+  background:
+    radial-gradient(circle at 14% 0%, rgba(70, 95, 93, 0.2), transparent 34%),
+    radial-gradient(circle at 86% 12%, rgba(143, 85, 55, 0.14), transparent 30%),
+    rgba(234, 223, 198, 0.94);
+}
+
+.social-panel {
+  width: min(100%, var(--max));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+  gap: 22px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.32), transparent 42%),
+    rgba(247, 239, 217, 0.76);
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.social-panel h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 58px);
+  line-height: 1.06;
+  letter-spacing: 0;
+}
+
+.social-panel p:not(.eyebrow) {
+  margin: 16px 0 0;
+  color: #403929;
+  line-height: 1.8;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.social-grid a {
+  min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(80, 68, 40, 0.34);
+  border-radius: 4px;
+  background: #11140f;
+  color: #f4e6b7;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.social-grid a:hover {
+  transform: translateY(-2px);
+  border-color: var(--brass);
+  background: #1c2517;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1566,6 +1629,7 @@ button {
   .plant-board,
   .character-tools,
   .herb-tools,
+  .social-panel,
   .buy-section {
     grid-template-columns: 1fr;
   }
@@ -1614,8 +1678,13 @@ button {
   }
 
   .hero-actions .button,
+  .social-grid a,
   .buy-section .button {
     width: 100%;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr;
   }
 
   .background-audio {
