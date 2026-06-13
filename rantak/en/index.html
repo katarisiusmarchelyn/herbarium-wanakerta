@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rantak Marunuang - Global Reader Companion</title>
+    <meta
+      name="description"
+      content="Global reader companion for Rantak Marunuang by Marchelyn. Explore the nagari map, cultural glossary, characters, route puzzle, and spoiler-safe clues."
+    />
+    <meta property="og:title" content="Rantak Marunuang" />
+    <meta
+      property="og:description"
+      content="Not every inheritance is meant to save you. Enter the global companion site for Marchelyn's rational folklore mystery."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../../assets/rantak/banner-rantak.jpg" />
+    <link rel="alternate" hreflang="id" href="../" />
+    <link rel="icon" href="../../assets/rantak/cover-rantak-en.jpg" type="image/jpeg" />
+    <link rel="preload" href="../../assets/rantak/banner-rantak.jpg" as="image" />
+    <link rel="stylesheet" href="../rantak.css" />
+  </head>
+  <body class="rantak-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="rantak-header" data-rantak-header>
+      <a class="rantak-brand" href="../../" aria-label="Back to the official Marchelyn website">
+        <span class="brand-sigil" aria-hidden="true"></span>
+        <span>
+          <span class="brand-kicker">Marchelyn Official</span>
+          <span class="brand-line">Rantak Marunuang</span>
+        </span>
+      </a>
+      <button class="rantak-menu-toggle" type="button" data-rantak-menu aria-expanded="false" aria-controls="rantak-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Open menu</span>
+      </button>
+      <nav class="rantak-nav" id="rantak-nav" aria-label="Rantak Marunuang navigation">
+        <a href="#world">World</a>
+        <a href="#map">Map</a>
+        <a href="#route">Route</a>
+        <a href="#people">People</a>
+        <a href="#glossary">Glossary</a>
+        <a href="#chapters">Chapters</a>
+        <a href="../" data-language-link>Bahasa Indonesia</a>
+        <a href="#buy" class="nav-buy">Buy</a>
+      </nav>
+    </header>
+
+    <div class="rantak-audio" data-audio-shell>
+      <audio data-bg-audio loop preload="auto">
+        <source src="../../assets/rantak/titian-sumpah.mp3" type="audio/mpeg" />
+      </audio>
+      <button class="audio-toggle" type="button" data-audio-toggle aria-pressed="false">
+        <span class="audio-icon" aria-hidden="true"></span>
+        <span class="audio-copy">
+          <span class="audio-label" data-audio-label>Pause music</span>
+          <span class="audio-hint" data-audio-hint>Music on</span>
+        </span>
+      </button>
+    </div>
+
+    <main id="main">
+      <section class="rantak-hero" id="home">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="../../assets/rantak/banner-rantak.jpg" alt="" />
+        </div>
+        <div class="hero-scrim"></div>
+        <div class="mist-band"></div>
+        <div class="lightning"></div>
+        <canvas class="ember-canvas" data-embers aria-hidden="true"></canvas>
+
+        <div class="hero-inner">
+          <div class="hero-copy-block reveal">
+            <p class="eyebrow">Global Reader Companion</p>
+            <h1>
+              <span>Rantak</span>
+              <span>Marunuang</span>
+            </h1>
+            <p class="hero-lead">
+              In a highland nagari guarded by custom, whispered over by curses, and bound to
+              generations of buried secrets, a cultural journalist returns home to prove that the
+              most dangerous thing in the village is not the dead. It is the living person who knows
+              how to make everyone stop asking questions.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-gold" href="#map">Enter the Nagari</a>
+              <a class="button button-dark" href="https://lynk.id/marchelyn" target="_blank" rel="noreferrer">Author Store</a>
+              <a class="button button-ghost" href="#glossary">Open Glossary</a>
+            </div>
+            <div class="signal-strip" aria-label="Reading signals">
+              <span>Rational folklore mystery</span>
+              <span>Adat noir</span>
+              <span>Maps and archives</span>
+              <span>Inheritance thriller</span>
+              <span>No PDF hosted here</span>
+            </div>
+          </div>
+
+          <figure class="cover-orbit reveal" data-cover-tilt>
+            <img src="../../assets/rantak/cover-rantak-en.jpg" alt="Rantak Marunuang English cover by Marchelyn" />
+            <figcaption class="cover-caption">
+              A story of inheritance, curses, and secrets that refuse to stay buried.
+            </figcaption>
+          </figure>
+        </div>
+        <a class="scroll-cue" href="#world" aria-label="Continue to the world guide"></a>
+      </section>
+
+      <section class="world-switch section-pad" id="world">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">World Guide</p>
+            <h2>This village is not afraid of ghosts. It is afraid of a map that might be wrong.</h2>
+            <p>
+              Rantak Marunuang is built as a rational folklore mystery. The atmosphere may feel
+              cursed, but every strange detail asks to be tested through space, timing, records,
+              bodies, and social pressure.
+            </p>
+          </div>
+          <div class="world-grid">
+            <article class="world-cell reveal">
+              <strong>01 / Atmosphere</strong>
+              <h3>Mist, drums, oil lamps</h3>
+              <p>Sound and light are not decoration. They shape how the village remembers one night.</p>
+            </article>
+            <article class="world-cell reveal">
+              <strong>02 / Puzzle</strong>
+              <h3>Space as alibi</h3>
+              <p>Bridges, irrigation paths, blind spots, and older maps become Nadira’s tools.</p>
+            </article>
+            <article class="world-cell reveal">
+              <strong>03 / Conflict</strong>
+              <h3>Land, shame, dignity</h3>
+              <p>Nearly every character is tied to land through inheritance, debt, status, or future hope.</p>
+            </article>
+            <article class="world-cell reveal">
+              <strong>04 / Promise</strong>
+              <h3>Custom is not the enemy</h3>
+              <p>The danger is a person who uses custom to make murder look like fate.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section section-pad" id="map">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">Interactive Map</p>
+            <h2>Open the points of Nagari Rantak Marunuang.</h2>
+            <p>
+              This map helps global readers understand the story world without revealing the final
+              answer. Choose a place to read its social role, mystery function, and safe clue.
+            </p>
+          </div>
+          <div class="map-stage">
+            <div class="map-frame reveal" data-map-frame>
+              <img src="../../assets/rantak/map-rantak-en.jpg" alt="Map of Nagari Rantak Marunuang" />
+            </div>
+            <aside class="map-intel reveal" data-map-panel>
+              <p class="eyebrow">Field Note</p>
+              <h3 data-map-title>Choose a map point</h3>
+              <p data-map-body>Choose a point on the map to open a spoiler-safe field note.</p>
+              <div class="intel-meta">
+                <div>
+                  <span>Function</span>
+                  <strong data-map-role>-</strong>
+                </div>
+                <div>
+                  <span>Safe clue</span>
+                  <strong data-map-clue>-</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="route">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">Procession Route</p>
+            <h2>The ritual moves like a prayer. Then one part of the order shifts.</h2>
+            <p>
+              The ritual is not a gimmick. It is spatial order, sound order, and memory order. Click
+              through the route to see how a procession can become a fair-play puzzle.
+            </p>
+          </div>
+          <div class="route-grid">
+            <div class="route-steps reveal" data-route-list></div>
+            <div class="route-reader reveal">
+              <p class="eyebrow">Route Reading</p>
+              <h3 data-route-title>Route</h3>
+              <p data-route-body>Choose a procession point to see how space, sound, and memory become part of the puzzle.</p>
+              <div class="progress-rail" aria-hidden="true">
+                <div class="progress-fill" data-route-fill></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-board section-pad" id="clues">
+        <div class="section-inner">
+          <div class="section-head center reveal">
+            <p class="eyebrow">Clue Board</p>
+            <h2>Anything that looks supernatural must still be testable.</h2>
+            <p>
+              Careful readers are given signs from the beginning. This board shows clue layers
+              without naming the culprit, explaining the final how, or spoiling the grand deduction.
+            </p>
+          </div>
+          <div class="clue-grid">
+            <article class="clue-card reveal" data-clue="offerings">
+              <span>Visual clue</span>
+              <h3>The offerings shift</h3>
+              <p>A color in the wrong place is not just ritual disorder. It changes how people read a death.</p>
+            </article>
+            <article class="clue-card reveal" data-clue="lamp">
+              <span>Spatial clue</span>
+              <h3>A lamp turns on too soon</h3>
+              <p>If light arrives before its time, shadows arrive before truth is ready to be seen.</p>
+            </article>
+            <article class="clue-card reveal" data-clue="mud">
+              <span>Physical clue</span>
+              <h3>The mud does not match</h3>
+              <p>Rice-field soil, irrigation paths, and bridge ground do not leave the same trace.</p>
+            </article>
+            <article class="clue-card reveal" data-clue="drum">
+              <span>Sound clue</span>
+              <h3>The drum edits memory</h3>
+              <p>When witnesses use sound as their clock, a small change can feel like shared certainty.</p>
+            </article>
+            <article class="clue-card reveal" data-clue="archive">
+              <span>Archive clue</span>
+              <h3>One stamp is too young</h3>
+              <p>Old records are not read only by words. Paper, storage marks, and ink have ages too.</p>
+            </article>
+            <article class="clue-card reveal" data-clue="name">
+              <span>Family clue</span>
+              <h3>A name is crossed out</h3>
+              <p>In Rantak, a name can decide land, dignity, and who is allowed to speak.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="people">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">Character Lens</p>
+            <h2>Everyone carries a wound, an interest, and a possible misreading.</h2>
+            <p>
+              Filter the characters to understand their pressure inside the village. These labels
+              do not reveal the answer; they help global readers follow the social machinery.
+            </p>
+          </div>
+          <div class="tool-row reveal">
+            <input id="rantak-character-search" type="search" placeholder="Search people, pressure, role..." autocomplete="off" />
+            <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="investigator">Investigator</button>
+            <button class="filter-btn" type="button" data-filter="custom">Custom</button>
+            <button class="filter-btn" type="button" data-filter="memory">Memory</button>
+            <button class="filter-btn" type="button" data-filter="law">Law</button>
+            <button class="filter-btn" type="button" data-filter="witness">Witness</button>
+            <button class="filter-btn" type="button" data-filter="suspect">Suspect</button>
+          </div>
+          <div class="character-grid" data-character-grid></div>
+        </div>
+      </section>
+
+      <section class="reader-lab section-pad" id="glossary">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">Glossary & Reader Context</p>
+            <h2>Indonesian terms should feel like doors, not walls.</h2>
+            <p>
+              This companion explains key Indonesian and Minangkabau-context terms used in the
+              novel. Rantak Marunuang is a fictional composite, not a literal representation of one
+              living community.
+            </p>
+          </div>
+          <div class="tool-row reveal">
+            <input id="rantak-glossary-search" type="search" placeholder="Search: nagari, pusako, rangkiang..." autocomplete="off" />
+          </div>
+          <div class="glossary-grid" data-glossary-grid></div>
+        </div>
+      </section>
+
+      <section class="section-pad" id="chapters">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">21-Chapter Trail</p>
+            <h2>Follow the mystery rhythm without opening the answer.</h2>
+            <p>
+              The novel moves as a slow-burn route: return, ritual, victims, archives, storm, false
+              solution, and final deduction. These notes stay spoiler-safe.
+            </p>
+          </div>
+          <div class="chapter-grid" data-chapter-grid></div>
+          <div class="chapter-note reveal" data-chapter-note></div>
+        </div>
+      </section>
+
+      <section class="reader-lab section-pad" id="lab">
+        <div class="section-inner">
+          <div class="lab-grid">
+            <div class="oath-console reveal" data-oath-console>
+              <p class="eyebrow">Mini Interactive</p>
+              <h3>If this is a curse, what do you test first?</h3>
+              <p>
+                Choose Nadira’s tools. The site does not give the final answer, but it teaches the
+                reading mode: not mocking fear, but testing sequence.
+              </p>
+              <div class="oath-options">
+                <button class="oath-option" type="button" data-oath="map">Map</button>
+                <button class="oath-option" type="button" data-oath="drum">Drum</button>
+                <button class="oath-option" type="button" data-oath="archive">Archive</button>
+              </div>
+              <div class="oath-result" data-oath-result>
+                The village is not asking for belief yet. It is asking whether you noticed the order.
+              </div>
+            </div>
+            <div class="interactive-panel reveal">
+              <p class="eyebrow">Spoiler-Safe Promise</p>
+              <h3>This companion does not reveal the grand deduction.</h3>
+              <p>
+                It opens the reading tools: places, social pressure, glossary terms, character
+                functions, and clue types. The answer stays inside the full novel.
+              </p>
+              <div class="button-row">
+                <a class="button button-dark" href="../../">Visit Herbarium</a>
+                <a class="button button-ghost" href="../">Bahasa Indonesia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="buy-section section-pad" id="buy">
+        <div class="section-inner">
+          <div class="buy-panel reveal">
+            <div>
+              <p class="eyebrow">Read the Novel</p>
+              <h2>Not every inheritance is meant to save you.</h2>
+              <p>
+                The Indonesian edition is available now through Marchelyn’s official store. The
+                English Google Play Books and Amazon Kindle editions are being prepared and will be
+                added here when they go live.
+              </p>
+            </div>
+            <div class="buy-stack">
+              <a class="button button-gold" href="https://lynk.id/marchelyn" target="_blank" rel="noreferrer">Author Store</a>
+              <a class="button button-dark" href="https://play.google.com/store/search?q=Rantak%20Marunuang%20Marchelyn&c=books" target="_blank" rel="noreferrer">Find Indonesian Edition on Google Play</a>
+              <span class="button button-muted" aria-disabled="true">English Google Play - coming soon</span>
+              <span class="button button-muted" aria-disabled="true">Amazon Kindle - coming soon</span>
+              <span class="store-note">This site does not host the manuscript PDF or DOCX. Purchase links point to official channels only.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="series-bridge section-pad">
+        <div class="section-inner">
+          <div class="section-head reveal">
+            <p class="eyebrow">Marchelyn Worlds</p>
+            <h2>Two doors, two kinds of mist, one appetite for secrets.</h2>
+          </div>
+          <div class="series-grid">
+            <a class="series-card reveal" href="../../" style="--image: url('../../assets/banner-herbarium.png')">
+              <div>
+                <h3>Herbarium of Lost Names</h3>
+                <p>An old herbal shop, a misty town, erased names, and records that look too neat.</p>
+              </div>
+            </a>
+            <a class="series-card reveal" href="../" style="--image: url('../../assets/rantak/banner-rantak.jpg')">
+              <div>
+                <h3>Rantak Marunuang</h3>
+                <p>An old nagari, a ritual route, boundary maps, and a curse that must be tested as human design.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rantak-footer">
+      <div>
+        <strong>Rantak Marunuang</strong>
+        <span>A rational folklore mystery by Marchelyn. Publisher: Katarisius.</span>
+      </div>
+      <div class="footer-links">
+        <a href="../../">Marchelyn Official</a>
+        <a href="../">Bahasa Indonesia</a>
+        <a href="https://lynk.id/marchelyn" target="_blank" rel="noreferrer">Author Store</a>
+        <a href="https://www.instagram.com/marchelyn.id/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </footer>
+
+    <script src="../../analytics.js" defer></script>
+    <script src="../rantak.js" defer></script>
+  </body>
+</html>
