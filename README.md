@@ -1,6 +1,6 @@
-# Herbarium Nama-Nama Yang Hilang - Website Interaktif
+# Marchelyn Official Novel Worlds
 
-Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wanakerta`.
+Website statis resmi untuk promosi dunia novel Marchelyn, diterbitkan oleh Katarisius. Situs ini memuat gerbang utama, companion interaktif untuk `Herbarium Nama-Nama Yang Hilang: Misteri Wanakerta`, dan segmen baru untuk `Rantak Marunuang`.
 
 ## Isi Website
 
@@ -18,6 +18,9 @@ Website statis untuk promosi novel `Herbarium Nama-Nama Yang Hilang: Misteri Wan
 - Daftar bab, FAQ, CTA 3 bab gratis, CTA preview 100 halaman English, dan pembelian ke Google Play Books, Amazon Kindle, serta `https://lynk.id/marchelyn`.
 - Panel media sosial resmi Marchelyn.id.
 - QR code resmi bertema novel untuk cetak dan promosi.
+- Gerbang utama Marchelyn untuk memilih dunia novel.
+- Segmen `Rantak Marunuang` di `/rantak/` dengan peta Nagari interaktif, rute Titian Sumpah, papan petunjuk spoiler-safe, tokoh, glosarium Minangkabau/Indonesia, jejak 21 bab, audio `Titian Sumpah`, dan CTA pembelian.
+- Segmen global `Rantak Marunuang` di `/rantak/en/` untuk pembaca internasional, dengan glosarium budaya yang lebih ramah pembaca global.
 
 ## URL Publik
 
@@ -31,6 +34,13 @@ Versi pembaca global:
 
 ```text
 https://katarisiusmarchelyn.github.io/herbarium-wanakerta/en/
+```
+
+Segmen Rantak Marunuang:
+
+```text
+https://katarisiusmarchelyn.github.io/herbarium-wanakerta/rantak/
+https://katarisiusmarchelyn.github.io/herbarium-wanakerta/rantak/en/
 ```
 
 ## Cara Buka di Komputer
@@ -67,14 +77,19 @@ Catatan: jangan upload PDF novel lengkap ke repository publik. Website ini hanya
 
 ## File Penting
 
-- `index.html` - struktur halaman.
-- `styles.css` - tampilan visual.
+- `index.html` - gerbang utama Marchelyn dan halaman Herbarium.
+- `styles.css` - tampilan visual gerbang utama dan Herbarium.
 - `script.js` - semua interaksi.
 - `analytics.js` - konfigurasi GA4, Meta Pixel, dan event klik/interaksi.
 - `en/index.html` - halaman English Companion untuk pembaca global.
 - `en/global.css` - tampilan khusus halaman global.
 - `en/global.js` - glosarium, peta, tokoh, tanaman, dan interaksi halaman global.
+- `rantak/index.html` - segmen Indonesia untuk `Rantak Marunuang`.
+- `rantak/en/index.html` - segmen global untuk `Rantak Marunuang`.
+- `rantak/rantak.css` - tampilan gothic adat untuk segmen Rantak.
+- `rantak/rantak.js` - peta, rute, glosarium, tokoh, audio, dan interaksi Rantak.
 - `assets/` - gambar dan audio promosi.
+- `assets/rantak/` - aset gambar dan audio promosi Rantak yang sudah dioptimalkan.
 - `assets/qr-herbarium-website-themed.png` - QR code bertema novel untuk dimasukkan ke buku atau materi promosi.
 - `assets/qr-herbarium-website-compact.png` - QR code bertema versi lebih ringkas.
 - `assets/qr-herbarium-website-plain.png` - QR code polos cadangan untuk cetak ukuran kecil.
@@ -112,5 +127,6 @@ Event yang disiapkan:
 - `qr_code_scan` untuk kunjungan dari QR code cetak novel.
 - `background_music_play`, `background_music_pause`, dan `background_music_autoplay_blocked`.
 - `case_clue_click`, `route_choice`, `label_randomized`, dan `name_label_generated`.
+- Parameter `page_world` membedakan `herbarium_wanakerta` dan `rantak_marunuang`, sehingga performa halaman Indonesia, English, Herbarium, dan Rantak bisa dipantau terpisah.
 
 Catatan privasi: fitur label nama tidak mengirim nama yang diketik pembaca ke analytics.

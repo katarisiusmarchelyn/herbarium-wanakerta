@@ -89,6 +89,7 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
     const safeName = eventName.replace(/[^a-zA-Z0-9_]/g, "_").slice(0, 40);
     const safeParams = cleanParams({
       page_variant: document.documentElement.lang === "en" ? "global_en" : "local_id",
+      page_world: window.location.pathname.includes("/rantak") ? "rantak_marunuang" : "herbarium_wanakerta",
       page_path: window.location.pathname,
       ...params,
     });
@@ -172,6 +173,9 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
     if (element.matches("[data-next-label], [data-next-global-label]")) {
       return ["label_randomized", { label: getReadableText(element) }];
     }
+    if (element.matches("[data-language-link]")) {
+      return ["language_switch_click", { label: getReadableText(element), destination: element.getAttribute("href") || "" }];
+    }
     if (element instanceof HTMLAnchorElement) {
       const href = element.getAttribute("href") || "";
       const label = getReadableText(element);
@@ -209,7 +213,7 @@ window.HERBARIUM_ANALYTICS_CONFIG = {
     });
 
     const searchInputs = document.querySelectorAll(
-      "#character-search, #herb-search, #glossary-search, #people-search, #plant-search",
+      "#character-search, #herb-search, #glossary-search, #people-search, #plant-search, #rantak-character-search, #rantak-glossary-search",
     );
     searchInputs.forEach((input) => {
       input.addEventListener("change", () => {
